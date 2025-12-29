@@ -29,6 +29,35 @@ and other relevant APIs.
   - The URL is valid
   - The URL points to an image
   - Only supported image formats are allowed
+ 
+## Usefulness and Motivation
+
+Many tools and websites that display npm packages would benefit from having
+a reliable and explicit package icon.
+
+Today, icon discovery is inconsistent and often depends on heuristics such as
+parsing README files or repository pages. Introducing a dedicated icon field
+gives package authors full control over how their package is visually represented.
+
+This is especially helpful in plugin-based ecosystems, where users browse
+large lists of similar packages.
+ 
+## Safety Considerations and Drawbacks
+
+Adding a new metadata field slightly increases package metadata size,
+but does not affect existing packages or tooling.
+
+Potential security and abuse concerns include tracking images or malicious content.
+These risks can be mitigated through validation, format restrictions, size limits,
+and possible proxying or caching by the registry.
+
+Since the field is optional and backward-compatible, existing packages and clients
+are not impacted.
+ 
+## Credits
+
+- Original issue: #8878
+- Proposed by: @justjam2013
 
 Example:
 
@@ -37,4 +66,4 @@ Example:
   "name": "example-package",
   "version": "1.0.0",
   "icon": "https://example.com/icon.png"
-}
+}```
