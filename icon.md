@@ -66,4 +66,4 @@ Example:
   "name": "example-package",
   "version": "1.0.0",
   "icon": "https://example.com/icon.png"
-}```
+}
