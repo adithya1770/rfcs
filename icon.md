@@ -11,7 +11,7 @@ especially in large plugin or library ecosystems.
 
 ## Proposed Solution
 
-This RFC proposes adding an optional `icon` field to `package.json`.
+This RFC proposes adding an optional `icon` field to `package.json`
 This field allows package authors to explicitly specify a URL to an image
 that represents the package.
 
